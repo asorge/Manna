@@ -1,4 +1,5 @@
-$('#vote-form').html("<%= j (render 'form') %>");
+$('.vote-header').hide();
+$('#vote-now').html("<%= j (render 'form') %>");
 
 $('#vote-form').dialog(
   {

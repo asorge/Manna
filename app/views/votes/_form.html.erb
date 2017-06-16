@@ -8,14 +8,14 @@
   <% end %>
 
   <br>
-    <h3 id = "vote_popup">Vote</h3>
     <br>
     <%= f.text_field  :decision, :id => 'decision', :style => 'display:none;'%>
     <div class = "vote_section">
-      <a href="#" class = "num_yes" id = "vote_yes" onclick="document.getElementById('decision').value = 'yes'; console.log('yes...'); document.getElementById('voteSubmit').click(); return false;" >Yes</a>
+      <h3><a href="#" class = "num_yes" id = "vote_yes" onclick="document.getElementById('decision').value = 'yes'; console.log('yes...'); document.getElementById('voteSubmit').click(); return false;" >Yes</a>
       |
       <a href="#" class = "num_no" id = "vote_no" onclick="document.getElementById('decision').value = 'no'; console.log('no...'); document.getElementById('voteSubmit').click(); return false;" >No</a>
-      <%= f.hidden_field :case_id, input_html: { value: @vote.case.id} %>
+      </h3>
+
     </div>
 
   <br>
