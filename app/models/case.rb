@@ -48,6 +48,22 @@ class Case < ActiveRecord::Base
     end
   end
 
+  def status_icon
+    if self.status == "check_signed"
+      return "done"
+    elsif self.status == "check_processed"
+      return "star"
+    elsif self.status == "approved"
+      return "thumb_up"
+    elsif self.status == "rejected"
+      return "thumb_down"
+    elsif self.status == "submitted"
+      return "turned_in"
+    else
+      return ""
+    end 
+  end
+
   def self.search(search)
     where("client_name LIKE ? OR summary LIKE ? OR subject LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end

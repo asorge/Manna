@@ -1,24 +1,19 @@
-<div class="card">
-  <%= simple_form_for @vote, remote: true do |f|   %>
 
-  <% if @vote.errors.any? %>
-    <% @vote.errors.full_messages.each do |message| %>
-      <p class = "already_voted"><%= message %></p>
-    <% end %>
-  <% end %>
 
-  <br>
-    <br>
-    <%= f.text_field  :decision, :id => 'decision', :style => 'display:none;'%>
-    <div class = "vote_section">
-      <h3><a href="#" class = "num_yes" id = "vote_yes" onclick="document.getElementById('decision').value = 'yes'; console.log('yes...'); document.getElementById('voteSubmit').click(); return false;" >Yes</a>
+
+<div id="vote-form">
+  <div class="row">
+    <div class="col s10 offset-s1">
+      <%= simple_form_for @vote, remote: true do |f|   %>
+      <%= f.text_field  :decision, :id => 'decision', :style => 'display:none;'%>
+       <h3>
+        <a href="#" class = "num_yes" id = "vote_yes" onclick="document.getElementById('decision').value = 'yes'; console.log('yes...'); document.getElementById('voteSubmit').click(); return true;" >Yes</a>
       |
-      <a href="#" class = "num_no" id = "vote_no" onclick="document.getElementById('decision').value = 'no'; console.log('no...'); document.getElementById('voteSubmit').click(); return false;" >No</a>
+        <a href="#" class = "num_no" id = "vote_no" onclick="document.getElementById('decision').value = 'no'; console.log('no...'); document.getElementById('voteSubmit').click(); return true;" >No</a>
       </h3>
+      <%= f.button :submit, :id => 'voteSubmit', :value => 'Done', :style => 'display:none;' %>
+    <% end %>
 
-    </div>
-
-  <br>
-    <%= f.button :submit, :id => 'voteSubmit', :value => 'Done', :style => 'display:none;' %>
-  <% end %>
+</div>
+</div>
 </div>

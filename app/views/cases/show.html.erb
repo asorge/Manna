@@ -18,16 +18,18 @@
             <span class ="num_no"><%= @case.votes.no.count%></span>
         </h3>
         <% unless current_user.role?(:staff) || current_user.role?(:care_deacon) %>
-          <div id='vote-form' class="col s4 offset-s5">
-          <%= link_to new_vote_taken_path(@case.id), :class => 'btn-large vote-header', remote: true do%>
-            VOTE NOW
-          <% end %>
-          <div id="vote-now">
-            <div class="row">
-              <div class="col s5">
+          <div class="col s4 offset-s4">
+            <div id="vote-now">
+              <div class="row">
+                <div class="col s5">
+      
+                </div>
               </div>
             </div>
           </div>
+          <div class="col s3 offset-s5">  <%= link_to new_vote_taken_path(@case.id), :class => 'btn-large vote-button', remote: true do%>
+           VOTE NOW
+          <% end %>
           </div>
       <% end %>
 

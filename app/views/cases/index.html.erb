@@ -21,8 +21,8 @@
           <tr>
             <td><%= link_to "#{c.subject}", c %></td>
             <td><%= c.client_name %></td>
-            <td><%= c.deacon %></td>
-            <td><%= c.status_display.capitalize %></td>
+            <td><%= c.deacon.proper_name %></td>
+            <td><i class="material-icons"><%= c.status_icon %></i></td>
             <td><%= c.date_submitted.to_formatted_s(:rfc822) %></td>
           </tr>
         <% end %>
@@ -38,9 +38,14 @@
   <br>
   <br>
   <br>
-  <%= link_to '+ NEW CASE', new_case_path, class: "btn orange lighten-2" %>
+ 
   <% else %>
     <p>please log in</p>
 
   <% end %>
 </div>
+<div class = "row">
+  <div class="col offset-s3 offset-m5">
+     <%= link_to 'NEW CASE', new_case_path, class: "btn orange lighten-2" %>
+    </div>
+  </div>

@@ -1,12 +1,15 @@
-$('.vote-header').hide();
-$('#vote-now').html("<%= j (render 'form') %>");
 
-$('#vote-form').dialog(
-  {
-    function() {
+$('#vote-now').empty().append("<%= j (render 'form') %>");
 
-    },
-    modal: true
+// $("#vote-yes").click(function() {
+// 	$("#vote-yes").animate({
+// 		color: 'green',
 
-  }
-);
+
+// 	},  1000 );
+// };
+
+$(#"vote-yes").click(function() {
+	$(#"vote-now").hide();
+});
+
