@@ -27,7 +27,7 @@
               </div>
             </div>
           </div>
-          <div class="col s3 offset-s5">  <%= link_to new_vote_taken_path(@case.id), :class => 'btn-large vote-button', remote: true do%>
+          <div class="col s3 offset-s4 offset-m5">  <%= link_to new_vote_taken_path(@case.id), :class => 'btn-large vote-button', remote: true do%>
            VOTE NOW
           <% end %>
           </div>
@@ -120,12 +120,12 @@
   // this.page.identifier = '<%= @case.id %>' // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   // };
 
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://manna-1.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
+  // (function() { // DON'T EDIT BELOW THIS LINE
+  // var d = document, s = d.createElement('script');
+  // s.src = 'https://manna-1.disqus.com/embed.js';
+  // s.setAttribute('data-timestamp', +new Date());
+  // (d.head || d.body).appendChild(s);
+  // })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 

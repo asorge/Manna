@@ -22,7 +22,7 @@
             <td><%= link_to "#{c.subject}", c %></td>
             <td><%= c.client_name %></td>
             <td><%= c.deacon.proper_name %></td>
-            <td><i class="material-icons"><%= c.status_icon %></i></td>
+            <td><a class="tooltipped" data-position="right" data-delay="50" data-tooltip=<%=c.status %>><i class="material-icons"><%= c.status_icon %></i></a></td>
             <td><%= c.date_submitted.to_formatted_s(:rfc822) %></td>
           </tr>
         <% end %>

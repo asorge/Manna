@@ -50,15 +50,15 @@ class Case < ActiveRecord::Base
 
   def status_icon
     if self.status == "check_signed"
-      return "done"
-    elsif self.status == "check_processed"
       return "star"
+    elsif self.status == "check_processed"
+      return "payment"
     elsif self.status == "approved"
       return "thumb_up"
     elsif self.status == "rejected"
       return "thumb_down"
     elsif self.status == "submitted"
-      return "turned_in"
+      return "new_releases"
     else
       return ""
     end 

@@ -1,15 +1,16 @@
 
 $('#vote-now').empty().append("<%= j (render 'form') %>");
 
-// $("#vote-yes").click(function() {
-// 	$("#vote-yes").animate({
-// 		color: 'green',
+$("#vote-now").css("border", "1px solid #fff");
 
-
-// 	},  1000 );
-// };
-
-$(#"vote-yes").click(function() {
-	$(#"vote-now").hide();
+$("#voteSubmit").click(function() {
+	setTimeout(function() {}, 10000);
+	//$('#vote-now').hide();
+	// $('#vote_yes').animate({
+	// 	color: '#60DE55'
+	// }, 
+	// { duration: '5000'});
 });
+
+
 
